@@ -1,25 +1,34 @@
+# import argv function from sys module
 from sys import argv
 
+#define the arguments passed in
 script, filename = argv
 
+# opening statement which declares what we're doing
+# and how to stop it.
 print "We're going to erase %r." % filename
 print "If you don't want that, hit CTRL-C (^C)."
 print "If you do want that, hit RETURN."
 
+# prompt for user to accept truncation of file
 raw_input("? ")
 
+# open the file and assign it a variable name
 print "Opening the file..."
 target = open(filename, 'w')
 
+# truncates the current file contents
 print "Truncating the file. Goodbye!"
 target.truncate()
 
+# receive input lines
 print "Now I'm going to ask you for three lines."
 
 line1 = raw_input("line 1: ")
 line2 = raw_input("line 2: ")
 line3 = raw_input("line 3: ")
 
+# write out the lines of input to the file
 print "I'm going to write these to the file."
 
 target.write(line1)
@@ -29,5 +38,6 @@ target.write("\n")
 target.write(line3)
 target.write("\n")
 
+# close the file
 print "And finally, we close it."
 target.close()
