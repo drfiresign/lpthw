@@ -21,7 +21,7 @@ target = open(filename, 'w')
 
 # truncates the current file contents
 print "Truncating the file. Goodbye!"
-target.truncate()
+target.truncate()  # this is unecessary
 
 # receive input lines
 print "Now I'm going to ask you for three lines."
