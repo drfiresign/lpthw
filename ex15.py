@@ -11,3 +11,4 @@ txt = open(filename)
 # the contents of the file
 print "Here's your file %r:" % filename
 print txt.read()
+txt.close()
