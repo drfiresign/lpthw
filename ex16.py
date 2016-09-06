@@ -6,9 +6,11 @@ script, filename = argv
 
 # opening statement which declares what we're doing
 # and how to stop it.
-print "We're going to erase %r." % filename
-print "If you don't want that, hit CTRL-C (^C)."
-print "If you do want that, hit RETURN."
+print """
+We're going to erase %r.
+If you don't want that, hit CTRL-C (^C).
+If you do want that, hit RETURN.
+""" % filename
 
 # prompt for user to accept truncation of file
 raw_input("? ")
@@ -31,12 +33,7 @@ line3 = raw_input("line 3: ")
 # write out the lines of input to the file
 print "I'm going to write these to the file."
 
-target.write(line1)
-target.write("\n")
-target.write(line2)
-target.write("\n")
-target.write(line3)
-target.write("\n")
+target.write("%s\n%s\n%s\n") % (line1, line2, line3)
 
 # close the file
 print "And finally, we close it."
