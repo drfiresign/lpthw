@@ -33,7 +33,9 @@ line3 = raw_input("line 3: ")
 # write out the lines of input to the file
 print "I'm going to write these to the file."
 
-target.write("%s\n%s\n%s\n") % (line1, line2, line3)
+total_line = "%s\n%s\n%s\n" % (line1, line2, line3)
+
+target.write(total_line)
 
 # close the file
 print "And finally, we close it."
