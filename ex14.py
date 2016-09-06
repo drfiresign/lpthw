@@ -1,7 +1,7 @@
 from sys import argv
 
-script, user_name = argv
-prompt = '> '
+script, user_name, elephant = argv
+prompt = 'This is a fish:::: '
 
 print "Hi %s, I'm the %s script." % (user_name, script)
 print "I'd like to as you a few questions."
@@ -16,6 +16,6 @@ computer = raw_input(prompt)
 
 print """
 Alright, so you said %r about liking me.
-You in %r. Not sure what that is.
-And you have a %r computer. Nice.
-""" % (likes, lives, computer)
+You live in %r. Not sure what that is.
+And you have a %r computer. Nice %s.
+""" % (likes, lives, computer, elephant)
