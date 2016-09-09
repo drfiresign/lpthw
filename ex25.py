@@ -17,7 +17,7 @@ def print_first_word(words):
 
 def print_last_word(words):
     """Prints the last word after popping it off."""
-    word = word.pop(-1)
+    word = words.pop(-1)
     print word
 
 
