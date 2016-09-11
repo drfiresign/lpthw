@@ -15,6 +15,10 @@ for fruit in fruits:
 for i in change:
     print "I got %r" % i
 
+# elements = range(0, 6)
+# for i in elements:
+#     print "Adding %d to the list." % i
+
 # we can also build lists, first start with an empty one
 elements = []
 
