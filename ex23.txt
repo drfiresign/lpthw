@@ -1,8 +1,0 @@
-# UGH
-Another review exercise. This one asked me to search for other
-Python projects to review so I can brush up on learning things
-independently. Not bad in practice, but I'm already do that
-so let's get back to some of the other stuff.
-
-* We haven't even begun to broach the same stuff I'm working on in
-Treehouse...

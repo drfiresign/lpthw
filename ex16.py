@@ -1,42 +1,40 @@
-# import argv function from sys module
+# import argument variables
 from sys import argv
 
-#define the arguments passed in
 script, filename = argv
 
-# opening statement which declares what we're doing
-# and how to stop it.
-print """
-We're going to erase %r.
-If you don't want that, hit CTRL-C (^C).
-If you do want that, hit RETURN.
-""" % filename
+# basic explantory text
+print(f"We're going to erase {filename}.")
+print("If you don't want that, hit CTRL-C (^C).")
+print("If you do want that, hit RETURN.")
 
-# prompt for user to accept truncation of file
-raw_input("? ")
+input("?")
 
-# open the file and assign it a variable name
-print "Opening the file..."
+print("Opening the file...")
+# opening the file in write mode (with the w)
 target = open(filename, 'w')
 
-# truncates the current file contents
-print "Truncating the file. Goodbye!"
-target.truncate()  # this is unecessary
+# truncate, or delete (collapse?) whatever data was previously there
+print("Truncating the file. Goodbye!")
+target.truncate()
 
-# receive input lines
-print "Now I'm going to ask you for three lines."
+print("Now I'm going to ask you for three lines.")
 
-line1 = raw_input("line 1: ")
-line2 = raw_input("line 2: ")
-line3 = raw_input("line 3: ")
+# taking in three separate lines as variable, one at a time
+line1 = input("line 1: ")
+line2 = input("line 2: ")
+line3 = input("line 3: ")
 
-# write out the lines of input to the file
-print "I'm going to write these to the file."
+print("I'm going to write these to the file.")
 
-total_line = "%s\n%s\n%s\n" % (line1, line2, line3)
+# writing one variable, then a new line char, another var, etc.
+# to the target file variable
+target.write(line1)
+target.write("\n")
+target.write(line2)
+target.write("\n")
+target.write(line3)
+target.write("\n")
 
-target.write(total_line)
-
-# close the file
-print "And finally, we close it."
+print("And finally, we close it.")
 target.close()
