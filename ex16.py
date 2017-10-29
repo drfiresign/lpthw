@@ -3,20 +3,10 @@ from sys import argv
 
 script, filename = argv
 
-# basic explantory text
-print(f"We're going to erase {filename}.")
-print("If you don't want that, hit CTRL-C (^C).")
-print("If you do want that, hit RETURN.")
-
-input("?")
-
 print("Opening the file...")
 # opening the file in write mode (with the w)
 target = open(filename, 'w')
-
-# truncate, or delete (collapse?) whatever data was previously there
-print("Truncating the file. Goodbye!")
-target.truncate()
+# truncation isn't necessary when using the w option
 
 print("Now I'm going to ask you for three lines.")
 
