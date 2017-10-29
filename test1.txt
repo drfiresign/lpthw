@@ -1,3 +1,3 @@
-i am 
-a thing
-that opens files
+i am more than 
+a thing that opens files.
+hello, goodbye.
