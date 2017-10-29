@@ -30,7 +30,8 @@ print("I'm going to write these to the file.")
 
 # writing one variable, then a new line char, another var, etc.
 # to the target file variable
-target.write(line1, nl, line2, nl, line3, nl)
+final_write = line1 + nl + line2 + nl + line3 + nl
+target.write(final_write)
 
 print("And finally, we close it.")
 target.close()
