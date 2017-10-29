@@ -24,17 +24,13 @@ print("Now I'm going to ask you for three lines.")
 line1 = input("line 1: ")
 line2 = input("line 2: ")
 line3 = input("line 3: ")
+nl = "\n"
 
 print("I'm going to write these to the file.")
 
 # writing one variable, then a new line char, another var, etc.
 # to the target file variable
-target.write(line1)
-target.write("\n")
-target.write(line2)
-target.write("\n")
-target.write(line3)
-target.write("\n")
+target.write(line1, nl, line2, nl, line3, nl)
 
 print("And finally, we close it.")
 target.close()
