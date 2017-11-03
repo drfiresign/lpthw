@@ -23,11 +23,11 @@ rewind(current_file)
 
 print("Let's print three lines:")
 
-current_line = 1
+current_line = 1 # c_l = 1
 print_a_line(current_line, current_file)
 
-current_line = current_line + 1
+current_line += 1 # c_l = 2
 print_a_line(current_line, current_file)
 
-current_line = current_line + 1
+current_line += 1 # c_l = 3
 print_a_line(current_line, current_file)
