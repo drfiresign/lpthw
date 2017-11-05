@@ -25,7 +25,7 @@ txt_again = open(file_again)
 print(txt_again.read())
 
 print('Let\'s practice everything.')
-print('You\'d need to know \'bout escapes' 
+print('You\'d need to know \'bout escapes')
 print('with \\ that do \n newlines and \t tabs.')
 
 poem = """
