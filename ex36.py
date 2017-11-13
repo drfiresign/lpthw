@@ -103,6 +103,8 @@ def cave():
 
 
 # armory function
+def armory():
+    pass
     # you see many suits of armor
     # you can search the room
         # find a key
@@ -111,6 +113,8 @@ def cave():
         # return to cave function
 
 # wine cellar function
+def cellar():
+    pass
     # you see many casks
         # give them names
     # you can drink from a cask
@@ -120,6 +124,8 @@ def cave():
         # return to cave function
 
 # hall function
+def hall():
+    pass
     # if you have the key
         # find the passage to... where?
     # if you don't have the key
@@ -133,6 +139,8 @@ def cave():
         # you feel no pain because of how drunk you are
 
 # passage function
+def passage():
+    pass
     # ???
     # profit!
 start()
