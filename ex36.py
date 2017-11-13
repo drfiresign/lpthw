@@ -5,15 +5,30 @@ import time
 # variables go here
 key = False
 drunk = False
+num_through_cave = 1
 
-# begin in a field
+# story now begins on a raft, which crashes upon a shore
 
 def start():
-    print("You awake in a field.")
-    print("The birds are chirping and there is a faint sound of running water.")
-    print("Your eyes open as the sun transits across your face, and you stand up.\n")
-    time.sleep(2)
+    print("""
+You are rafting down a river.
 
+Your raft hits a boulder breaking into two.
+You are knocked across the bow of your raft as the stern is consumed in the
+rock's undertow.
+
+Your raft careens into the river shore, tossing you from the bow and onto the
+beach. The landing knocks the wind out of your lungs and you pass out.""")
+    time.sleep(2)
+    print("You awake on a river shore.")
+    if num_through_cave != 1:
+        print(f"There are {num_through_cave} broken rafts next to you.")
+    else:
+        print("There is a broken raft next to you.")
+    print("""The birds are chirping and the sun is shining.
+Your eyes open as the sun transits across your face, and you stand up.\n""")
+    time.sleep(2)
+    
     field()
 
 # dead function
@@ -27,10 +42,32 @@ def dead(why):
         print(why, "All done. Bye bye.\n")
         exit(0)
 
+# heart attack function
+# used in moments of indecisiveness
+def heartattack():
+    print("""
+You feel indecisive.\n
+A pain grips your left arm as your face contorts in a grimace.
+The feeling that you've just never amounted to much in life enters your mind.
+""")
+    time.sleep(2)
+    print("""
+A strong smell of toast fills your nostrils and as you pass out, you think
+of your wasted youth and the lost feelings of love and graditude that the
+years of traveling have erased from your life.
+""")
+    time.sleep(2)
+    print("""
+The last time you thought of your sister and how long ago you last spoke,
+you only felt shame.
+""")
+    time.sleep(2)
+    dead("You have had a heart attack.")
+
 # field function
 def field():
     # see a river and an entrance to a cave
-    print("You are standing in a field.")
+    print("You are standing on a river shore.")
     print("To the RIGHT is a river, to the LEFT is a cave.")
     print("Which way shall you go?\n")
     
@@ -43,39 +80,21 @@ def field():
     elif "r" in choice:
         river()
     else:
-        print("""
-You feel indecisive.
-A pain grips your left arm as your face contorts in a grimace.
-The feeling that you've just never amounted to much in life enters your mind.
-""")
-        time.sleep(2)
-        print("""
-A strong smell of toast fills your nostrils and as you pass out, you think
-of your wasted youth and the lost feelings of love and graditude that the
-years of traveling have erased from your life.
-""")
-        time.sleep(2)
-        print("""
-The last time you thought of your sister and how long ago you last spoke,
-you only felt shame.
-""")
-        time.sleep(2)
-        dead("You have had a heart attack.")
 
 
 # river function
 def river():
     print("""
-You walk towards the sound of the river.
+You walk closer to the river on your right.
 
 As you approach the water, you can faintly hear a sweet melody.
-You step into the glistening water.
-The deeper you go the stronger the song becomes.
+You step into the glistening water, ignoring the wreckage next to you.
+The deeper you step into the water, the stronger the song becomes.
         
 The water rises; as it passes your chin you feel warm and safe.
-The water enters your mouth as you drift into a dream, and you drown.\n""")
+The water enters your mouth and you drift into a slumber.\n""")
 
-    dead("You have died.")
+    dead("You have drown.")
 
 # cave function
 def cave():
