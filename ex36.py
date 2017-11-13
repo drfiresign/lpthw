@@ -2,27 +2,38 @@ from sys import exit
 import time
 
 
+# variables go here
+key = False
+drunk = False
+
+
 # begin in a field
 
 def start():
-    print("You awake in a field.")
-    print("The birds are chirping and there is a faint sound of running water.")
-    print("Your eyes open as the sun transits across your face, and you stand up.\n")
+    print("\n\tYou awake in a field.")
+    print("\tThe birds are chirping and there is a faint sound of running water.")
+    print("\tYour eyes open as the sun transits across your face, and you stand up.\n")
     time.sleep(2)
 
     field()
 
 # dead function
 def dead(why):
-    print(why, "All done. Bye bye.")
-    exit(0)
+    if drunk:
+        print("\tYour vision blurs and you begin to see double.")
+        print("\tYou might have had just a bit too much this time.\n")
+        print("\tThe world fades and you die in a puddle of your own vomit.\n")
+        print("\tAll done. Bye bye.\n")
+    else:
+        print("\t", why, "All done. Bye bye.\n")
+        exit(0)
 
 # field function
 def field():
     # see a river and an entrance to a cave
-    print("You are standing in a field.")
-    print("To the right is a river, to the left is a cave.")
-    print("Which way shall you go?")
+    print("\tYou are standing in a field.")
+    print("\tTo the right is a river, to the left is a cave.")
+    print("\tWhich way shall you go?\n")
     
     choice = input("> ").lower()
 
@@ -33,7 +44,8 @@ def field():
     elif "r" in choice:
         river()
     else:
-        print("""You feel indecisive.
+        print("""
+        You feel indecisive.
         A pain grips your left arm as your face contorts in a grimace.
         The feeling that you've just never amounted to much in life enters your mind.
         """)
@@ -52,15 +64,17 @@ def field():
         dead("You have had a heart attack.")
 
 
-
 # river function
 def river():
-    print("""You walk towards the sound of the river.
-As you approach the water, you can faintly hear a sweet melody.
-You step into the glistening water.
-The deeper you go the stronger the song becomes
-The water rises; as it passes your chin you feel warm and safe
-The water enters your mouth as you drift into a dream, and you drown.""")
+    print("""
+        You walk towards the sound of the river.
+
+        As you approach the water, you can faintly hear a sweet melody.
+        You step into the glistening water.
+        The deeper you go the stronger the song becomes.
+        
+        The water rises; as it passes your chin you feel warm and safe.
+        The water enters your mouth as you drift into a dream, and you drown.\n""")
 
     dead("You have died.")
 
@@ -68,13 +82,25 @@ The water enters your mouth as you drift into a dream, and you drown.""")
 def cave():
     pass
     # you see an armory
-        # armory function
-
     # you see a wine cellar
-        # wine cellar function
-
     # you see a hall (of heroes)
-        # hall function
+    print("\tYou see to your right an armory.")
+    print("\tTo your left, a cellar smelling strongly of wine.")
+    print("\tIn front of you is a dimly lit room.\n\tFrom what you can see it may be a statue or throne room.")
+
+    print("\tWhich way shall you go?")
+
+    choice = input("> ").lower()
+    # armory function
+    if 'r' in choice:
+        armory()
+    # wine cellar function
+    elif 'l' in choice:
+        cellar()
+    # hall function
+    else:
+        hall()
+
 
 # armory function
     # you see many suits of armor
