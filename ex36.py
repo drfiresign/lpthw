@@ -6,11 +6,10 @@ import time
 key = False
 drunk = False
 
-
 # begin in a field
 
 def start():
-    print("\nYou awake in a field.")
+    print("You awake in a field.")
     print("The birds are chirping and there is a faint sound of running water.")
     print("Your eyes open as the sun transits across your face, and you stand up.\n")
     time.sleep(2)
@@ -21,18 +20,18 @@ def start():
 def dead(why):
     if drunk:
         print("Your vision blurs and you begin to see double.")
-        print("You might have had just a bit too much this time.\n")
-        print("The world fades and you die in a puddle of your own vomit.\n")
+        print("You might have had just a bit too much this time.")
+        print("The world fades and you die in a puddle of your own vomit.")
         print("All done. Bye bye.\n")
     else:
-        print("", why, "All done. Bye bye.\n")
+        print(why, "All done. Bye bye.\n")
         exit(0)
 
 # field function
 def field():
     # see a river and an entrance to a cave
     print("You are standing in a field.")
-    print("To the right is a river, to the left is a cave.")
+    print("To the RIGHT is a river, to the LEFT is a cave.")
     print("Which way shall you go?\n")
     
     choice = input("> ").lower()
@@ -49,7 +48,7 @@ You feel indecisive.
 A pain grips your left arm as your face contorts in a grimace.
 The feeling that you've just never amounted to much in life enters your mind.
 """)
-        time.sleep(3)
+        time.sleep(2)
         print("""
 A strong smell of toast fills your nostrils and as you pass out, you think
 of your wasted youth and the lost feelings of love and graditude that the
@@ -84,11 +83,11 @@ def cave():
     # you see an armory
     # you see a wine cellar
     # you see a hall (of heroes)
-    print("You see to your right an armory.")
-    print("To your left, a cellar smelling strongly of wine.")
-    print("In front of you is a dimly lit room.\nFrom what you can see it may be a statue or throne room.")
+    print("You see to your RIGHT an armory.")
+    print("To your LEFT, a cellar smelling strongly of wine.")
+    print("In FRONT of you is a dimly lit room.\nFrom what you can see it may be a statue or throne room.")
 
-    print("Which way shall you go?")
+    print("Which way shall you go?\n")
 
     choice = input("> ").lower()
     # armory function
