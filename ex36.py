@@ -104,6 +104,7 @@ def cave():
 
 # armory function
 def armory():
+    print("\tYou enter the armory.")
     pass
     # you see many suits of armor
     # you can search the room
@@ -114,6 +115,7 @@ def armory():
 
 # wine cellar function
 def cellar():
+    print("\tYou decend to the cellar.")
     pass
     # you see many casks
         # give them names
@@ -125,6 +127,7 @@ def cellar():
 
 # hall function
 def hall():
+    print("\tYou enter the hall.")
     pass
     # if you have the key
         # find the passage to... where?
@@ -140,6 +143,7 @@ def hall():
 
 # passage function
 def passage():
+    print("\tYou tentatively enter the hallway.")
     pass
     # ???
     # profit!
