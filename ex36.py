@@ -10,9 +10,9 @@ drunk = False
 # begin in a field
 
 def start():
-    print("\n\tYou awake in a field.")
-    print("\tThe birds are chirping and there is a faint sound of running water.")
-    print("\tYour eyes open as the sun transits across your face, and you stand up.\n")
+    print("\nYou awake in a field.")
+    print("The birds are chirping and there is a faint sound of running water.")
+    print("Your eyes open as the sun transits across your face, and you stand up.\n")
     time.sleep(2)
 
     field()
@@ -20,20 +20,20 @@ def start():
 # dead function
 def dead(why):
     if drunk:
-        print("\tYour vision blurs and you begin to see double.")
-        print("\tYou might have had just a bit too much this time.\n")
-        print("\tThe world fades and you die in a puddle of your own vomit.\n")
-        print("\tAll done. Bye bye.\n")
+        print("Your vision blurs and you begin to see double.")
+        print("You might have had just a bit too much this time.\n")
+        print("The world fades and you die in a puddle of your own vomit.\n")
+        print("All done. Bye bye.\n")
     else:
-        print("\t", why, "All done. Bye bye.\n")
+        print("", why, "All done. Bye bye.\n")
         exit(0)
 
 # field function
 def field():
     # see a river and an entrance to a cave
-    print("\tYou are standing in a field.")
-    print("\tTo the right is a river, to the left is a cave.")
-    print("\tWhich way shall you go?\n")
+    print("You are standing in a field.")
+    print("To the right is a river, to the left is a cave.")
+    print("Which way shall you go?\n")
     
     choice = input("> ").lower()
 
@@ -45,21 +45,21 @@ def field():
         river()
     else:
         print("""
-        You feel indecisive.
-        A pain grips your left arm as your face contorts in a grimace.
-        The feeling that you've just never amounted to much in life enters your mind.
-        """)
+You feel indecisive.
+A pain grips your left arm as your face contorts in a grimace.
+The feeling that you've just never amounted to much in life enters your mind.
+""")
         time.sleep(3)
         print("""
-        A strong smell of toast fills your nostrils and as you pass out, you think
-        of your wasted youth and the lost feelings of love and graditude that the
-        years of traveling have erased from your life.
-        """)
+A strong smell of toast fills your nostrils and as you pass out, you think
+of your wasted youth and the lost feelings of love and graditude that the
+years of traveling have erased from your life.
+""")
         time.sleep(2)
         print("""
-        The last time you thought of your sister and how long ago you last spoke,
-        you only felt shame.
-        """)
+The last time you thought of your sister and how long ago you last spoke,
+you only felt shame.
+""")
         time.sleep(2)
         dead("You have had a heart attack.")
 
@@ -67,14 +67,14 @@ def field():
 # river function
 def river():
     print("""
-        You walk towards the sound of the river.
+You walk towards the sound of the river.
 
-        As you approach the water, you can faintly hear a sweet melody.
-        You step into the glistening water.
-        The deeper you go the stronger the song becomes.
+As you approach the water, you can faintly hear a sweet melody.
+You step into the glistening water.
+The deeper you go the stronger the song becomes.
         
-        The water rises; as it passes your chin you feel warm and safe.
-        The water enters your mouth as you drift into a dream, and you drown.\n""")
+The water rises; as it passes your chin you feel warm and safe.
+The water enters your mouth as you drift into a dream, and you drown.\n""")
 
     dead("You have died.")
 
@@ -84,11 +84,11 @@ def cave():
     # you see an armory
     # you see a wine cellar
     # you see a hall (of heroes)
-    print("\tYou see to your right an armory.")
-    print("\tTo your left, a cellar smelling strongly of wine.")
-    print("\tIn front of you is a dimly lit room.\n\tFrom what you can see it may be a statue or throne room.")
+    print("You see to your right an armory.")
+    print("To your left, a cellar smelling strongly of wine.")
+    print("In front of you is a dimly lit room.\nFrom what you can see it may be a statue or throne room.")
 
-    print("\tWhich way shall you go?")
+    print("Which way shall you go?")
 
     choice = input("> ").lower()
     # armory function
@@ -104,7 +104,7 @@ def cave():
 
 # armory function
 def armory():
-    print("\tYou enter the armory.")
+    print("You enter the armory.")
     pass
     # you see many suits of armor
     # you can search the room
@@ -115,7 +115,7 @@ def armory():
 
 # wine cellar function
 def cellar():
-    print("\tYou decend to the cellar.")
+    print("You decend to the cellar.")
     pass
     # you see many casks
         # give them names
@@ -127,7 +127,7 @@ def cellar():
 
 # hall function
 def hall():
-    print("\tYou enter the hall.")
+    print("You enter the hall.")
     pass
     # if you have the key
         # find the passage to... where?
@@ -143,7 +143,7 @@ def hall():
 
 # passage function
 def passage():
-    print("\tYou tentatively enter the hallway.")
+    print("You tentatively enter the hallway.")
     pass
     # ???
     # profit!
