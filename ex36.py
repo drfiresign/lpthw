@@ -3,10 +3,11 @@ import time
 
 
 # variables go here
+key = False
 item = False
 drunk = False
 num_through_cave = 1
-item = False
+
 # possible location values are:
 # shore, river, entry, hall, cellar, armory, hallway
 loc = ''
@@ -172,7 +173,7 @@ the room. You see an unused torch on the ground, as though it were waiting for y
 
 # armory function
 def armory():
-    global item
+    global key
     global loc
     global drunk
     loc = 'armory'
@@ -204,7 +205,7 @@ twenty different houses, perhaps more. They all glisten in the torchlight.""")
     if 's' in choice:
         print("You decide to search the suits for anything of value.")
         print('')
-        # find a item
+        # find the key
         print("You find a few scraps of paper, but nothing of value on them.")
         print("One suit does yield a small hexagonal box.")
         print("It has some markings on it which you can't read,")
@@ -217,7 +218,7 @@ twenty different houses, perhaps more. They all glisten in the torchlight.""")
         choice = input("> ").lower()
 
         if 'y' in choice:
-            item = True
+            key = True
             print("You decide to keep the box and papers, stuffing them in your pockets.")
             print('')
         else:
@@ -239,6 +240,7 @@ def cellar():
     global loc
     global drunk
     loc = 'cellar'
+    how_drunk = 0
 
     if not drunk:
         print("""
@@ -269,6 +271,7 @@ to call Charlie. Uncorking Charlie, you find a sweet scent rising to meet you.
             time.sleep(3)
             print("You drink deeply from the cask, and your cheeks feel flushed.")
             drunk = True
+            how_drunk += 1
 
         if 'n' in choice:
             print("You feel too uncertain to indulge right now.")
@@ -285,6 +288,13 @@ to call Charlie. Uncorking Charlie, you find a sweet scent rising to meet you.
         print('')
         print("'What's one more?' you think to yourself?")
         print("You load up on another few swigs from a fresh cask, then head back upstairs.")
+        how_drunk += 1
+
+        if how_drunk > 3:
+            print("Your vision blurs and you begin to see double.")
+            print("You might have had just a bit too much this time.")
+            print("The world fades and you die in a puddle of your own vomit.")
+            print("All done. Bye Bye.\n")
         time.sleep(3)
         entry()
     
@@ -296,21 +306,29 @@ to call Charlie. Uncorking Charlie, you find a sweet scent rising to meet you.
 def hall():
     global drunk
     global loc
+    global key 
     global item
     loc = 'hall'
 
     print("You enter the hall.")
-    # if you have the item
-        # you find the item
+    # if you don't have the key and are drunk
+    if not key and drunk:
+        # you stumble onto a floor switch activating a trap door which impales you on spikes
+        print("As you stumble into the main hall,")
+        print("you notice your senses have been *greatly* dulled.")
+        print('')
+        print("As you wander between statues, you notice the writing on the base of each.")
+        print("You cannot read the language, but you're pretty sure that doesn't")
+        print("have anything to do with how much wine you've had.")
+        # you feel no pain because of how drunk you are
+    # if you have the item and are drunk
+        # you stumble into a wall and break through into a treasure chamber
     # if you don't have the item
         # you pull a level and the door closes sealing you in
         # your torch begins to fade
         # you starve to death in total darkness
-    # if you have the item and are drunk
-        # you stumble into a wall and break through into a treasure chamber
-    # if you don't have the item and are drunk
-        # you stumble onto a floor switch activating a trap door which impales you on spikes
-        # you feel no pain because of how drunk you are
+    # if you have the item
+        # you find the item
 
 # passage function
 def passage():
